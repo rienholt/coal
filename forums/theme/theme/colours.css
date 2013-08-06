@@ -53,7 +53,7 @@ hr.dashed {
 }
 
 .navbar {
-	background: #95a5a6;
+	background: #e67e22;
 }
 
 .forabg {
@@ -386,7 +386,7 @@ ul.topiclist li.row dt a.subforum.unread {
 }
 
 li.row {
-	background:#bdc3c7;
+	background:#bcbcbc;
 }
 
 li.row strong {
@@ -409,9 +409,7 @@ li.row:hover dd {
 	border-left-color: transparent;
 }
 
-li.header dt, li.header dd {
-	color: #FFFFFF;
-}
+
 
 /* Forum list column styles */
 ul.topiclist dd.searchextra {
@@ -1065,6 +1063,20 @@ a.green:hover {
 }
 .white {
 	color:#fff;
+}
+.darkgray {
+	color:#595959 !important;
+}
+.darkgray {
+	color:#595959 !important;
+	text-decoration:none !important;
+}
+.black {
+	color:#000 !important;
+}
+.black {
+	color:#000 !important;
+	text-decoration:none !important;
 }
 .buttons  a{
 	color:#fff;

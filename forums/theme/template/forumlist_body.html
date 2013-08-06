@@ -14,10 +14,10 @@
 				<li class="header">
 					<table>
 					<tr>
-						<td class="foruminfo"><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}"  class="orange"><h1  class="orange">{forumrow.FORUM_NAME}</h1></a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></td>
-						<td class="topics orange"><h4>{L_TOPICS}</h4></td>
-						<td class="posts orange"><h4>{L_POSTS}</h4></td>
-						<td class="lastpost orange"><span><h4>Last Poster</h4></span></td>
+						<td class="foruminfo"><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}"  class="darkgray"><h1  class="darkgray">{forumrow.FORUM_NAME}</h1></a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></td>
+						<td class="topics darkgray"><h4>{L_TOPICS}</h4></td>
+						<td class="posts darkgray"><h4>{L_POSTS}</h4></td>
+						<td class="lastpost darkgray"><span><h4>Last Poster</h4></span></td>
 					</tr>
 					</table>
 				</li>
@@ -29,7 +29,8 @@
 		<li class="row">
 			<table>
 			<tr>
-				<td class="icon" style="background-image: url({forumrow.FORUM_FOLDER_IMG_SRC}); background-repeat: no-repeat;">
+				<td class="icon">
+				<div style="background: url({forumrow.FORUM_FOLDER_IMG_SRC}) no-repeat;"><img src="./styles/Coalition/imageset/transparency.png" height="36" width="33" alt="Transparent Image" /></div>
 				</td>
 				<td class="foruminfo" title="{forumrow.FORUM_FOLDER_IMG_ALT}">
 				<!-- IF S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED --><!-- <a class="feed-icon-forum" title="{L_FEED} - {forumrow.FORUM_NAME}" href="{U_FEED}?f={forumrow.FORUM_ID}"><img src="{T_THEME_PATH}/images/feed.gif" alt="{L_FEED} - {forumrow.FORUM_NAME}" /></a> --><!-- ENDIF -->
@@ -49,7 +50,7 @@
 					<td class="posts">{forumrow.POSTS} <dfn>{L_POSTS}</dfn></td>
 					<td class="lastpost"><!-- IF forumrow.FORUM_LAST_POSTER_AVATAR --><div style="float: left; padding-top: 0px; margin-left: 5px; margin-right: {forumrow.FORUM_LAST_POSTER_AVATAR_MARGIN}px;">{forumrow.FORUM_LAST_POSTER_AVATAR}</div><!-- ENDIF --><span>
 						<!-- IF forumrow.U_UNAPPROVED_TOPICS --><a href="{forumrow.U_UNAPPROVED_TOPICS}">{UNAPPROVED_IMG}</a><!-- ENDIF -->
-						<!-- IF forumrow.LAST_POST_TIME --><dfn>{L_LAST_POST}</dfn> {L_POST_BY_AUTHOR} {forumrow.LAST_POSTER_FULL}
+						<!-- IF forumrow.LAST_POST_TIME --><dfn>{L_LAST_POST}</dfn> <!-- IF not S_IS_BOT --><!-- IF S_LTT_ICONS && forumrow.TOPIC_ICON_IMG --><img src="{T_ICONS_PATH}{forumrow.TOPIC_ICON_IMG}" width="{forumrow.TOPIC_ICON_IMG_WIDTH}" height="{forumrow.TOPIC_ICON_IMG_HEIGHT}" alt="" /> <!-- ENDIF --><a href="<!-- IF S_LTT == 1 -->{forumrow.U_LAST_POST}<!-- ELSEIF S_LTT == 2 -->{forumrow.U_NEWEST_POST}<!-- ELSE -->{forumrow.U_FIRST_POST}<!-- ENDIF -->" title="{forumrow.LATEST_TOPIC_TITLE_FULL}">{forumrow.LATEST_TOPIC_TITLE_SHORT}</a><!-- ENDIF --><br />{L_POST_BY_AUTHOR} {forumrow.LAST_POSTER_FULL}
 						<!-- IF not S_IS_BOT --><a href="{forumrow.U_LAST_POST}"><i class="icon-share-alt"></i></a> <!-- ENDIF --><br />{forumrow.LAST_POST_TIME}<!-- ELSE -->{L_NO_POSTS}<br />&nbsp;<!-- ENDIF --></span>
 					</td>
 				<!-- ENDIF -->

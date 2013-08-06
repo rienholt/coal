@@ -95,14 +95,11 @@ li.header td, li.header td {
 
 /* Forum list column styles */
 td.icon {
-	min-height: 35px;
-	min-width:40px;
-	background-position: 10px 50%;		/* Position of folder icon */
-	background-repeat: no-repeat;
+
 }
 
 td.foruminfo {
-	padding: 0 10px;
+	padding: 0 5px;
 	width:100%;
 	clear:both;
 }
